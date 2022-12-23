@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "django-poetry-example"
+version = "0.1.0"
+description = ""
+authors = ["Valentin Chanas <anisometropie@gmail.com>"]
+readme = "README.md"
+packages = [{include = "django_poetry_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.1.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

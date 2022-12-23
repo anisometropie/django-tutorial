@@ -1,0 +1,16 @@
+<h1>Create new poll</h1>
+
+<form action="{% url 'polls:new-poll-submit' %}" method="post">
+  {% csrf_token %}
+  <fieldset>
+    <label for="question_text">Question</label><br>
+    <input type="text" name="question_text" id="question_text">
+    <br><br>
+
+    {% for i in '123'|make_list %}
+      <label for="choice{{ i }}">Choice {{ i }}</label>
+      <input type="text" name="choice{{ i }}" id="choice{{ i }}"><br>
+    {% endfor %}
+  </fieldset>
+  <input type="submit" value="Create">
+  </form>
